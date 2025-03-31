@@ -1,9 +1,8 @@
 package io.zipcoder.polymorphism;
 
-public class Dog extends Pet{
-
+public class Bird extends Pet{
     @Override
     public String speak() {
-        return "roof roof";
+        return "eeekkkkk";
     }
 }
