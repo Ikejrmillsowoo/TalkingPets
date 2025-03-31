@@ -13,4 +13,12 @@ public class DogTest{
         Assert.assertEquals("Scooby", dog.getName());
     }
 
+    @Test
+    public void testSpeak(){
+        Pet dog = new Dog();
+        dog.setName("Scooby");
+
+        Assert.assertEquals("Scooby", dog.getName());
+    }
+
 }

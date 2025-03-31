@@ -33,9 +33,24 @@ public class CountPets {
     public void addPets(){
         for (int i = 0; i < numberOfPets; i++) {
             String typeOfPet = getUserInput("What kind of pet is it? (1)-Dog, (2)-Cat, (3)-Bird");
-            String nameOfPet = getUserInput("What is the pets name?");
-            this.petNames.add(typeOfPet+ " : " + nameOfPet);
+            if (typeOfPet.equals("1")){
+                Dog dog = new Dog();
+                String nameOfPet = setPetsName();
+                this.petNames.add("Dog"+ " : " + nameOfPet + " can "  +dog.speak());
+            } else if (typeOfPet.equals("2")){
+                Dog cat = new Dog();
+                String nameOfPet = setPetsName();
+                this.petNames.add("Cat"+ " : " + nameOfPet + " can "  + cat.speak());
+            } else {
+                Dog bird = new Dog();
+                String nameOfPet = setPetsName();
+                this.petNames.add("Bird"+ " : " + nameOfPet + " can "  + bird.speak());
+            }
         }
+    }
+
+    public String setPetsName() {
+        return getUserInput("What is the pets name?");
     }
 
     public void addPets(String type, String name){
